@@ -31,8 +31,21 @@ The second part of the analysis shows us how the passengers were distributed in 
 The third part of the analyses used the three charts above but grouping the data between survivors and non-survivors.
 * Conclusion: The passengers who had a better chance of survivors were: Women, people on the 1st and 2nd class and kids.
 
+#### After the feedbacks:
+After receiving feedbacks, a couple changes were made:
+* 
+
 
 ## Feedback
+### 1
+> The charts are pretty self-explanatory. However, the blue/"pink" bubbles led me to always interpret as male/female instead of Yes/No (for survival).
+
+### 2
+> Although the charts are easy to understand, there should be some comments with the conclusions and findings for some charts.
+
+### 3
+> The charts are ok and the conclusions are easily made. But the design, all charts in a row could be improved. 
+
 
 ## Resources
 * [dimple](http://dimplejs.org/examples_index.html)
