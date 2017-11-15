@@ -33,19 +33,18 @@ The third part of the analyses used the three charts above but grouping the data
 
 #### After the feedbacks:
 After receiving feedbacks, a couple changes were made:
-* 
-
+* The default colors were changed to avoid mixigin "male/female" bubbles.
+* Commentaries were added after relevant charts to draw attention to the conclusions.
+* The charts were reorganized and are now in two rows.
 
 ## Feedback
-### 1
 > The charts are pretty self-explanatory. However, the blue/"pink" bubbles led me to always interpret as male/female instead of Yes/No (for survival).
 
-### 2
 > Although the charts are easy to understand, there should be some comments with the conclusions and findings for some charts.
 
-### 3
 > The charts are ok and the conclusions are easily made. But the design, all charts in a row could be improved. 
 
+There are two *chart-module* files in the *js* folder and two "html.index" files. The v1 were create before the feedbacks, the v2 are the updated version.
 
 ## Resources
 * [dimple](http://dimplejs.org/examples_index.html)
