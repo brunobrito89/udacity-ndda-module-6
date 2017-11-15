@@ -20,6 +20,17 @@ The chosen design was to compare which features could have influenced the chance
 * Pclass
 * Age
 
+The summarized data files used for the charts were generated using a Python script (which is included in the *data_cleaning* folder).
+
+The analysis first presents an overview on the total number of survivors.
+* Conclusion: The majority of the passengers did not survive.
+
+The second part of the analysis shows us how the passengers were distributed in Gender, Pclass and Age.
+* Conclusion: The majority of the passengers were male, on the third class and between 20 to 40 years old.
+
+The third part of the analyses used the three charts above but grouping the data between survivors and non-survivors.
+* Conclusion: The passengers who had a better chance of survivors were: Women, people on the 1st and 2nd class and kids.
+
 
 ## Feedback
 
