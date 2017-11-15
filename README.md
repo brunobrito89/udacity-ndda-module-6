@@ -44,7 +44,7 @@ After receiving feedbacks, a couple changes were made:
 
 > The charts are ok and the conclusions are easily made. But the design, all charts in a row could be improved. 
 
-There are two *chart-module* files in the *js* folder and two "html.index" files. The v1 were create before the feedbacks, the v2 are the updated version.
+There are two *chart-module* files in the *js* folder and two "index.html" files. The v1 were create before the feedbacks, the v2 are the updated version.
 
 ## Resources
 * [dimple](http://dimplejs.org/examples_index.html)
