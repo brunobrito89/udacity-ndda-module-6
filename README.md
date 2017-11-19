@@ -23,12 +23,16 @@ The chosen design was to compare which features could have influenced the chance
 The summarized data files used for the charts were generated using a Python script (which is included in the *data_cleaning* folder).
 
 The analysis first presents an overview on the total number of survivors.
+This part is represented by the first chart, for this one, I chose to use an Histogram. This kind of chart is ideal to represent distributions of a categorical feature, such as Survived.
 * Conclusion: The majority of the passengers did not survive.
 
 The second part of the analysis shows us how the passengers were distributed in Gender, Pclass and Age.
+This part of the analysis is represented by the second, third and fourth charts. They're all bar charts that represent clearly the distribution of each feature.
 * Conclusion: The majority of the passengers were male, on the third class and between 20 to 40 years old.
 
 The third part of the analyses used the three charts above but grouping the data between survivors and non-survivors.
+For this part of the analysis, I wanted to check if there was any correlation between the previously analyzed features and the Survived one. In order to do so, I chose to use a scatter plot even though I'm comparing categorical features.
+I've come to the conclusion that the scatter plot suits my idea for this chart, which is the conclusion bellow.
 * Conclusion: The passengers who had a better chance of survivors were: Women, people on the 1st and 2nd class and kids.
 
 #### Changes made after receiving the feedbacks:
