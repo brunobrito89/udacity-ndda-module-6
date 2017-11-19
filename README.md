@@ -1,5 +1,5 @@
 # Udacity Data Analyst Nanodegree Project 6
-## This repository contains the final project of Data Visualization Module.
+## This repository contains the final project of the Data Visualization Module.
 
 ## Summary
 This analysis was created in order to help users understand which circumstances could have led the passengers to a higher survival rate.
@@ -41,15 +41,15 @@ The v1 was create before the feedbacks, the v2 is the updated version.
 
 * For the third feedback, a change in the visual design was made. At first, the charts were presented all in a single column. The user had to scroll all the way to the bottom to check all charts. I decided to create a second column which gave more information at once for the viewers, since there charts are not complex, the view was not "poluted", it actually became easier to understand.
 
-## User Feedbacks from three friends
-> __First Feedback:__ 
-The charts are pretty self-explanatory. However, the blue/"pink" bubbles led me to always interpret as male/female instead of Yes/No (for survival).
+## Received Feedbacks 
+> __First Person Feedback:__ 
+The charts are pretty self-explanatory. However, when I saw the the blue/"pink" bubbles in the last two charts that are facet by Survival, the first thing that came to my mind was they referred to Male/Female. Maybe different colors could be used with a better constrast in order to avoid this confusion.
 
-> __Second Feedback:__ 
-Although the charts are easy to understand, there should be some comments with the conclusions and findings for some charts.
+> __Second Person Feedback:__ 
+Although the charts are easy to understand, there should be some comments with the conclusions and findings for some charts. It's seems to me that it's very rare to find a chart that has no text, whether it's a brief description or a context of some sort. Just creating this visualization with lots of charts on a row doesn't seem to tell a story and makes hard for me to understand "what I'm looking for". Maybe there could be an introduction or some sort of description/conclusion to allow the viewer to firstly understand "what am I looking at".
 
-> __Third Feedback:__
-The charts are ok and the conclusions are easily made. But the design, all charts in a row could be improved. 
+> __Third Person Feedback:__
+The charts are not complex and conclusions can be easily made. However, since there's no "contextualization", it's hard to understand the history behind the charts, what they mean. I have to keep scrolling up and down, analyzing one chart after another and going back to make my conclusion. I belive there could be lesser charts with a better focus on what they're trying to tell or they could be better arrenged in the screen in order to facilitate the viewers understanding. 
 
 
 
