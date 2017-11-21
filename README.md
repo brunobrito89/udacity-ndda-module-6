@@ -43,7 +43,7 @@ The v1 was create before the feedbacks, the v2 is the updated version.
 
 * For the second feedback, I've decided to add commentaries after two relevant charts. My pourpose on these changes was to draw attention to the conclusions and help the viewer understand the idea that the charts are trying to explain.
 
-* For the third feedback, a change in the visual design was made. At first, the charts were presented all in a single column. The user had to scroll all the way to the bottom to check all charts. I decided to use Bootstrap and create a second column which gave more information at once for the viewers, since there charts are not complex, the view was not "poluted", it actually became easier to understand.
+* For the third and fourth feedback, a change in the visual design was made. At first, the charts were presented all in a single column. The user had to scroll all the way to the bottom to check all charts. I decided to use Bootstrap and create a second column which gave more information at once for the viewers, since there charts are not complex, the view was not "poluted", it actually became easier to understand.
 
 ## Received Feedbacks 
 > __First Person Feedback:__ 
@@ -55,7 +55,8 @@ Although the charts are easy to understand, there should be some comments with t
 > __Third Person Feedback:__
 The charts are not complex and conclusions can be easily made. However, since there's no "contextualization", it's hard to understand the history behind the charts, what they mean. I have to keep scrolling up and down, analyzing one chart after another and going back to make my conclusion. I belive there could be lesser charts with a better focus on what they're trying to tell or they could be better arrenged in the screen in order to facilitate the viewers understanding. 
 
-
+> __Fourth Person Feedback:__
+My first feedback is that the charts are shown correctly when displayed on Google Chrome. There seems to be an issue with Firefox. I believe you should use Bootstrap in order to make better responsive visualizations and be "safe" despite the browser your viewer might be using. However, the visualizations are really good, I just think they need a better style, it's too simple and straightforward. Maybe add something more than just the charts or re-arrenge them in a better way.
 
 ## Resources
 * [dimple](http://dimplejs.org/examples_index.html)
