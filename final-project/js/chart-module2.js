@@ -4,19 +4,11 @@
  * @param {*} className SVG Div Class Name 
  */
 function appendSVG(className) {
-    var margin = 75,
-        width = 600 - margin,
-        height = 400 - margin;
-
-    var svg = d3.select("body")
-        .append("div")
-        .attr('class', className)
+    var svg = d3.select("#" + className)
         .append("svg")
-        .attr("width", width + margin)
-        .attr("height", height + margin)
-        //.style("float", "left")
-        //.append('g')
-        ;
+        .attr("width", 500)
+        .attr("height", 400)
+        .append('g');
 
     return svg;
 }
@@ -37,22 +29,10 @@ function addChartTitle(svg, chart, title) {
         .text(title)
 }
 
-/**
- * This method is responsible for adding a conclusion
- * below a chart.
- * @param chart
- * @param conclusion
- */
-function addChartConclusion(chart, conclusion) {
-    d3.select("body")
-        .append("div")
-        .attr("class", "chartConclusion")
-        .append("p")
-        .attr("x", chart._xPixels() + chart._widthPixels() / 2)
-        .attr("y", chart._yPixels() + chart._heightPixels() + 50)
-        .style("clear", "left")
-        .style("font-size", "120%")
-        .text(conclusion);
+function addChartConclusion(className, chart, conclusion) {
+    d3.select("#" + className)
+        .attr("class", "text-center")
+        .text(conclusion)
 }
 
 /**
@@ -81,7 +61,7 @@ function generateBarChart(data, className, xAxis, yAxis, title, xOrderRule = nul
     addChartTitle(svg, chart, title);
 
     if (conclusion) {
-        addChartConclusion(chart, conclusion)
+        addChartConclusion(className + "Conclusion", chart, conclusion)
     }
 
 }
@@ -167,7 +147,7 @@ function drawCharts() {
         var chartConclusion = "After analysing the charts grouped by Survival, we can conclude that women, " + 
         "children and people on the first class were more likely to survive the Titanic crash."
 
-        addChartConclusion(chart, chartConclusion)
+        addChartConclusion("seventhChartConclusion", chart, chartConclusion) 
     });
 }
 
