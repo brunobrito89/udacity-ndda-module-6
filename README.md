@@ -43,7 +43,7 @@ The v1 was create before the feedbacks, the v2 is the updated version.
 
 * For the second feedback, I've decided to add commentaries after two relevant charts. My pourpose on these changes was to draw attention to the conclusions and help the viewer understand the idea that the charts are trying to explain.
 
-* For the third feedback, a change in the visual design was made. At first, the charts were presented all in a single column. The user had to scroll all the way to the bottom to check all charts. I decided to create a second column which gave more information at once for the viewers, since there charts are not complex, the view was not "poluted", it actually became easier to understand.
+* For the third feedback, a change in the visual design was made. At first, the charts were presented all in a single column. The user had to scroll all the way to the bottom to check all charts. I decided to use Bootstrap and create a second column which gave more information at once for the viewers, since there charts are not complex, the view was not "poluted", it actually became easier to understand.
 
 ## Received Feedbacks 
 > __First Person Feedback:__ 
