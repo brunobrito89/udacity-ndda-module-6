@@ -1,6 +1,7 @@
 /**
- * 
- * @param {*} className 
+ * This method is responsible for appending a new SVG
+ * inside a div tag to the body of page.
+ * @param {*} className SVG Div Class Name 
  */
 function appendSVG(className) {
     var margin = 75,
@@ -13,15 +14,16 @@ function appendSVG(className) {
         .append("svg")
         .attr("width", width + margin)
         .attr("height", height + margin)
-        .style("float", "left")
-        .append('g')
+        //.style("float", "left")
+        //.append('g')
         ;
 
     return svg;
 }
 
 /**
- * 
+ * This method is responsible for adding a title
+ * to a chart
  * @param {*} svg 
  * @param {*} chart 
  * @param {*} title 
@@ -35,7 +37,13 @@ function addChartTitle(svg, chart, title) {
         .text(title)
 }
 
-function addChartConclusion(className, chart, conclusion) {
+/**
+ * This method is responsible for adding a conclusion
+ * below a chart.
+ * @param chart
+ * @param conclusion
+ */
+function addChartConclusion(chart, conclusion) {
     d3.select("body")
         .append("div")
         .attr("class", "chartConclusion")
@@ -44,17 +52,19 @@ function addChartConclusion(className, chart, conclusion) {
         .attr("y", chart._yPixels() + chart._heightPixels() + 50)
         .style("clear", "left")
         .style("font-size", "120%")
-        .text(conclusion)
+        .text(conclusion);
 }
 
 /**
- * 
+ * This method is responsible for creating a complete chart
+ * with the option of having or not a x scale order and a conclusion.
  * @param {*} data 
  * @param {*} className 
  * @param {*} xAxis 
  * @param {*} yAxis 
  * @param {*} title 
- * @param {*} xOrderRule 
+ * @param {*} xOrderRule
+ * @param conclusion
  */
 function generateBarChart(data, className, xAxis, yAxis, title, xOrderRule = null, conclusion = null) {
     var svg = appendSVG(className);
@@ -71,34 +81,35 @@ function generateBarChart(data, className, xAxis, yAxis, title, xOrderRule = nul
     addChartTitle(svg, chart, title);
 
     if (conclusion) {
-        addChartConclusion(className, chart, conclusion)
+        addChartConclusion(chart, conclusion)
     }
 
 }
 
 /**
- * 
+ * This method is responsible for reading the input data
+ * and calling the methods that generate the charts.
  */
 function drawCharts() {
-    // Passenger x Gender
+    // Passenger x Gender Bar Chart
     d3.csv("data/output/groupby-survived.csv", function (data) {
         generateBarChart(data, "firstChart",
-            "Survived", "Number of Occurrences", "Number of Passengers per Survival");
+            "Survived", "Number of Occurrences", "Number of Passengers per Survival Status");
     });
 
-    // Passenger x Gender
+    // Passenger x Gender Bar Chart
     d3.csv("data/output/groupby-gender.csv", function (data) {
         generateBarChart(data, "secondChart",
             "Sex", "Number of Occurrences", "Number of Passengers per Gender");
     });
 
-    // Passenger x Pclass
+    // Passenger x Pclass Bar Chart
     d3.csv("data/output/groupby-pclass.csv", function (data) {
         generateBarChart(data, "thirdChart",
             "Pclass", "Number of Occurrences", "Number of Passengers per Passenger Class");
     });
 
-    // Passenger x Age
+    // Passenger x Age Bar Chart
     d3.csv("data/output/groupby-age.csv", function (data) {
         xAxisOrderRule = ["0 to 10", "11 to 20", "21 to 30", "31 to 40",
             "41 to 50", "51 to 60", "61 to 70", "71 to 80"];
@@ -113,7 +124,7 @@ function drawCharts() {
     });
 
 
-    // Passenger x Gender ~ Survival
+    // Passenger x Gender ~ Survival Scatter Plot
     d3.csv("data/output/groupby-survived-gender.csv", function (data) {
         var svg = appendSVG("fifthChart");
         var chart = new dimple.chart(svg, data);
@@ -126,7 +137,7 @@ function drawCharts() {
         addChartTitle(svg, chart, "Number of Passengers per Gender facet by Survival");
     });
 
-    // Passenger x Pclass ~ Survival
+    // Passenger x Pclass ~ Survival Scatter Plot
     d3.csv("data/output/groupby-survived-pclass.csv", function (data) {
         var svg = appendSVG("sixthChart");
         var chart = new dimple.chart(svg, data);
@@ -139,7 +150,7 @@ function drawCharts() {
         addChartTitle(svg, chart, "Number of Passengers per Pclass facet by Survival");
     });
 
-    // Passenger x Age ~ Survival
+    // Passenger x Age ~ Survival Scatter Plot
     d3.csv("data/output/groupby-survived-age.csv", function (data) {
         var svg = appendSVG("seventhChart");
         var chart = new dimple.chart(svg, data);
@@ -156,10 +167,8 @@ function drawCharts() {
         var chartConclusion = "After analysing the charts grouped by Survival, we can conclude that women, " + 
         "children and people on the first class were more likely to survive the Titanic crash."
 
-        addChartConclusion("seventhChart", chart, chartConclusion) 
+        addChartConclusion(chart, chartConclusion)
     });
-};
-
-
+}
 
 drawCharts();
