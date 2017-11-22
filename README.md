@@ -23,7 +23,7 @@ The chosen design was to compare which features could have influenced the chance
 The summarized data files used for the charts were generated using a Python script (which is included in the *data_cleaning* folder).
 
 The analysis first presents an overview on the total number of survivors.
-This part is represented by the first chart, for this one, I chose to use an Histogram. This kind of chart is ideal to represent distributions of a categorical feature, such as Survived.
+This part is represented by the first chart, for this one, I chose to use a bar chart. This kind of chart is ideal to represent distributions of a categorical feature, such as Survived.
 * Conclusion: The majority of the passengers did not survive.
 
 The second part of the analysis shows us how the passengers were distributed in Gender, Pclass and Age.
