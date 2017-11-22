@@ -108,10 +108,10 @@ function drawCharts() {
     d3.csv("data/output/groupby-survived-gender.csv", function (data) {
         var svg = appendSVG("fifthChart");
         var chart = new dimple.chart(svg, data);
-        var x = chart.addCategoryAxis("x", ["Sex", "Survived"]);
+        chart.addCategoryAxis("x", ["Sex", "Survived"]);
         chart.addMeasureAxis("y", "Number of Occurrences");
-        chart.addSeries("Survived", dimple.plot.bubble);
-        chart.addLegend(140, 10, 510, 0, "right");
+        chart.addSeries("Survived", dimple.plot.bar);
+        chart.addLegend(0, 50, 480, 0, "right");
         chart.defaultColors[1].fill = "#FDB462";
         chart.draw();
         addChartTitle(svg, chart, "Number of Passengers per Gender facet by Survival");
@@ -122,9 +122,10 @@ function drawCharts() {
         var svg = appendSVG("sixthChart");
         var chart = new dimple.chart(svg, data);
         var x = chart.addCategoryAxis("x", ["Pclass", "Survived"]);
+        x.addOrderRule(["1", "2", "3"])
         chart.addMeasureAxis("y", "Number of Occurrences");
-        chart.addSeries("Survived", dimple.plot.bubble);
-        chart.addLegend(140, 10, 510, 0, "right");
+        chart.addSeries("Survived", dimple.plot.bar);
+        chart.addLegend(0, 50, 480, 0, "right");
         chart.defaultColors[1].fill = "#FDB462";
         chart.draw();
         addChartTitle(svg, chart, "Number of Passengers per Pclass facet by Survival");
@@ -138,8 +139,8 @@ function drawCharts() {
         x.addOrderRule(["0 to 10", "11 to 20", "21 to 30", "31 to 40",
             "41 to 50", "51 to 60", "61 to 70", "71 to 80"]);
         chart.addMeasureAxis("y", "Number of Occurrences");
-        chart.addSeries("Survived", dimple.plot.bubble);
-        chart.addLegend(140, 10, 510, 0, "right");
+        chart.addSeries("Survived", dimple.plot.bar);
+        chart.addLegend(0, 50, 480, 0, "right");
         chart.defaultColors[1].fill = "#FDB462";
         chart.draw();
         addChartTitle(svg, chart, "Number of Passengers per Age facet by Survival");
